@@ -1,0 +1,15 @@
+$primary: #2f3136;
+$secondary: #1f2023;
+
+// $text-color: #fff !default;
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.card {
+    border-radius: 20px;
+}
+
+body {
+    color: white;
+}
