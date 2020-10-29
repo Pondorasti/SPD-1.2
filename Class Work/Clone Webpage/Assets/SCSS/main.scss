@@ -17,13 +17,19 @@ $spacers: (
 );
 
 
+$body-bg: $secondary;  //this is the text color
+$body-color: #fff; //this is the background color
+
 @import "node_modules/bootstrap/scss/bootstrap";
 
 .card {
     border-radius: 20px;
 }
 
-body {
-    color: white;
-    background-color: $secondary;
+em {
+  color: #f0f0f450;
+  font-style: normal;
 }
+
+a { color: #fff; }
+a:hover { color: #fff; }
