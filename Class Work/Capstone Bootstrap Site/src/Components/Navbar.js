@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 
 function SHNavbar() {
     return (
-        <Navbar bg="dark" variant="dark" className="py-3 px-4">
+        <Navbar bg="dark" variant="dark" className="py-3 px-4 fixed-top">
             <Navbar.Brand href="#">Sushi</Navbar.Brand>
 
             <Navbar.Collapse className="justify-content-end">
