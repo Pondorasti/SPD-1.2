@@ -14,7 +14,7 @@ function SHHero() {
                 height: "75vh",
             }}
         >
-            <Row className="px-5 align-items-center justify-content-center"
+            <Row className="px-5 align-items-center justify-content-center mx-0"
                 style={{
                     backgroundColor: "rgba(0, 0, 0, 0.65)",
                     height: "75vh",
