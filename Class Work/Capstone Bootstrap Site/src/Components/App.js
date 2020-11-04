@@ -5,6 +5,7 @@ import Hero from './Hero'
 import Feature from './Feature'
 import Footer from './Footer'
 import Divider from './Divider'
+import ReviewsCarousel from './ReviewsCarousel'
 
 import brain from "./../Assets/brain.png";
 
@@ -14,7 +15,7 @@ function App() {
             <Navbar />
             <Hero />
 
-            <Divider/>
+            <Divider />
             <Feature
                 title="
                     Tell us what you hate!
@@ -24,7 +25,7 @@ function App() {
                 image={brain}
             />
 
-            <Divider/>
+            <Divider />
             <Feature
                 title="
                     Tell us what you hate!
@@ -33,8 +34,17 @@ function App() {
                 description="We use a state of the art AI that can accuratelly predict movies in a matter of seconds."
                 image={brain}
             />
-            
-            <Footer/>            
+
+            <Divider />
+            <ReviewsCarousel 
+                reviews={[
+                    { description: "I love everything about Sushi. Go get it.", author: 'Rico Hawkins' },
+                    { description: "Excellent App! Does What’s Expected + More", author: 'Omari Richardson' },
+                    { description: "I love everything about Sushi 🍣. Go use it!.", author: 'Neel Holder' }
+                ]}
+            />
+
+            <Footer />
         </>
     );
 }
