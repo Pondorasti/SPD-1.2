@@ -40,7 +40,7 @@ function App() {
                 reviews={[
                     { description: "I love everything about Sushi. Go get it.", author: 'Rico Hawkins' },
                     { description: "Excellent App! Does What’s Expected + More", author: 'Omari Richardson' },
-                    { description: "I love everything about Sushi 🍣. Go use it!.", author: 'Neel Holder' }
+                    { description: "I love everything about Sushi 🍣. Go use it!", author: 'Neel Holder' }
                 ]}
             />
 
