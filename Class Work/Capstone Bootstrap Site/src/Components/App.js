@@ -8,6 +8,7 @@ import Divider from './Divider'
 import ReviewsCarousel from './ReviewsCarousel'
 
 import brain from "./../Assets/brain.png";
+import neurons from "./../Assets/neurons.png";
 
 function App() {
     return (
@@ -17,22 +18,17 @@ function App() {
 
             <Divider />
             <Feature
-                title="
-                    Tell us what you hate!
-                    Sushi will tell you what you love!
-                "
+                title={ <div>Tell us what you hate!<br/>Sushi will tell you what you love!</div> }
                 description="We use a state of the art AI that can accuratelly predict movies in a matter of seconds."
                 image={brain}
             />
 
             <Divider />
             <Feature
-                title="
-                    Tell us what you hate!
-                    Sushi will tell you what you love!
-                "
-                description="We use a state of the art AI that can accuratelly predict movies in a matter of seconds."
-                image={brain}
+                title="A neural engine built from ground up."
+                description="Sushi's mind is a reimplementation of a human brain, made out of layers of neurons."
+                image={neurons}
+                isReversed={true}
             />
 
             <Divider />
