@@ -24,28 +24,26 @@ const useStyles = makeStyles({
   }
 });
 
-function TMCard(prop) {
+function TMCard(props) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
       <CardHeader
-        avatar={<Avatar className={classes.avatar}>P</Avatar>}
-        title="Pondorasti"
+        avatar={<Avatar className={classes.avatar}>{props.shorthandUsername}</Avatar>}
+        title={props.username}
       />
         <CardMedia
           className={classes.media}
-          image="https://thumbs.videogamer.com/gIzHBeSoybrgy7E6wOblHmNG1C4=/1920x1080/smart/https://s.videogamer.com/meta/39e8/ed097b1d-fca9-4cbc-8b84-4ca56c10b384_AmongUsbanner.jpg"
-          title="Contemplative Reptile"
+          image={props.bannerURL}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {props.game}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {props.description}
           </Typography>
         </CardContent>
       </CardActionArea>
