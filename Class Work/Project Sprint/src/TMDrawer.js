@@ -14,6 +14,7 @@ import GroupIcon from '@material-ui/icons/Group';
 import FolderSharedIcon from '@material-ui/icons/FolderShared';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import InfoIcon from '@material-ui/icons/Info';
+import RateReviewIcon from '@material-ui/icons/RateReview';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -54,6 +55,10 @@ function TMDrawer() {
           </List>
           <Divider />
           <List>
+          <ListItem button>
+              <ListItemIcon><RateReviewIcon /></ListItemIcon>
+              <ListItemText primary="Send Feedback" />
+            </ListItem>
             <ListItem button>
               <ListItemIcon><ContactSupportIcon /></ListItemIcon>
               <ListItemText primary="How it works?" />

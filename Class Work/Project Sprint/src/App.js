@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 import TMDrawer from './TMDrawer'
 import TMAppBar from './TMAppBar'
+import TMCard from './TMCard'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,9 +34,7 @@ function App() {
 
       <main className={classes.content}>
         <Toolbar />
-        <Typography paragraph>
-          Hello
-        </Typography>
+        <TMCard />
       </main>
     </div>
   );
