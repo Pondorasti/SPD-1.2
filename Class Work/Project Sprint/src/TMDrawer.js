@@ -10,11 +10,14 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
+import CreateTeamoDialog from './CreateTeamoDialog'
+
 import GroupIcon from '@material-ui/icons/Group';
 import FolderSharedIcon from '@material-ui/icons/FolderShared';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import InfoIcon from '@material-ui/icons/Info';
 import RateReviewIcon from '@material-ui/icons/RateReview';
+import CreateIcon from '@material-ui/icons/Create';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +35,15 @@ const useStyles = makeStyles((theme) => ({
 
 function TMDrawer() {
   const classes = useStyles();
+  const [openCreateLobby, setCreateLobby] = React.useState(false)
+
+  function handleCreateTeamoOpen() {
+    setCreateLobby(true)
+  }
+
+  function handleCreateLobbyClose() {
+    setCreateLobby(false)
+  }
 
   return (
     <Drawer
@@ -48,6 +60,14 @@ function TMDrawer() {
               <ListItemIcon><GroupIcon /></ListItemIcon>
               <ListItemText primary="Friends List" />
             </ListItem>
+
+
+            <ListItem button onClick={handleCreateTeamoOpen}>
+              <ListItemIcon><CreateIcon /></ListItemIcon>
+              <ListItemText primary="Create Teamo" />
+            </ListItem>
+            <CreateTeamoDialog open={openCreateLobby} onClose={handleCreateLobbyClose} />
+
             <ListItem button>
               <ListItemIcon><FolderSharedIcon /></ListItemIcon>
               <ListItemText primary="Bookmarked Teams" />
