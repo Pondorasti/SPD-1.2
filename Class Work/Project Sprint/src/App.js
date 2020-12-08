@@ -10,6 +10,7 @@ import TMDrawer from './TMDrawer'
 import TMAppBar from './TMAppBar'
 import TMCard from './TMCard'
 import DummyData from './DummyData'
+import SelectedGameInfo from './SelectedGameInfo'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,6 +38,7 @@ function App() {
 
         <main className={classes.content}>
           <Toolbar />
+          <SelectedGameInfo />
           <Grid
             container
             spacing={2}
