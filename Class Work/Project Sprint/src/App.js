@@ -1,9 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Grid } from "@material-ui/core"
+import TMTheme from "./TMTheme"
 
 import TMDrawer from './TMDrawer'
 import TMAppBar from './TMAppBar'
@@ -27,43 +28,45 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
+    <ThemeProvider theme={TMTheme}>
+      <div className={classes.root}>
+        <CssBaseline />
 
-      <TMAppBar />
-      <TMDrawer />
+        <TMAppBar />
+        <TMDrawer />
 
-      <main className={classes.content}>
-        <Toolbar />
-        <Grid
-          container
-          spacing={2}
-          justify="center"
-          classes={{ root: classes.gridContainer }}
-        >
-          {DummyData.map((item, index) => (
-            <Grid
-              key={index}
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-              xl={2}
-              classes={{ root: classes.gridItem }}
-            >
-              <TMCard
-                username={item.username}
-                shorthandUsername={item.shorthandUsername}
-                bannerURL={item.bannerURL}
-                game={item.game}
-                description={item.description}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </main>
-    </div>
+        <main className={classes.content}>
+          <Toolbar />
+          <Grid
+            container
+            spacing={2}
+            justify="center"
+            classes={{ root: classes.gridContainer }}
+          >
+            {DummyData.map((item, index) => (
+              <Grid
+                key={index}
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                xl={2}
+                classes={{ root: classes.gridItem }}
+              >
+                <TMCard
+                  username={item.username}
+                  shorthandUsername={item.shorthandUsername}
+                  bannerURL={item.bannerURL}
+                  game={item.game}
+                  description={item.description}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 
